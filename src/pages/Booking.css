@@ -1,0 +1,22 @@
+.bk { padding-block: 2rem 4rem; max-width: 640px; }
+.bk__title, .bk--done h1 { font-weight: 300; font-size: clamp(2rem, 6vw, 4rem); margin-bottom: 2rem; }
+.bk__title strong, .bk--done strong { font-weight: 800; }
+.bk--done p { line-height: 1.6; }
+
+.bk__form { display: grid; gap: 1.25rem; }
+.bk__field { display: grid; gap: 0.4rem; }
+.bk__field label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+.bk__field input, .bk__field select, .bk__field textarea {
+  font: 300 0.9rem var(--font); color: var(--ink);
+  padding: 0.9rem 1.1rem; border-radius: 18px;
+  border: 1px solid #bdbdb6; background: #fff;
+}
+.bk__field input:focus, .bk__field select:focus, .bk__field textarea:focus {
+  outline: 2px solid var(--ink); outline-offset: 1px;
+}
+
+.bk__error { color: #b3261e; font-size: 0.75rem; }
+.bk__error--form { padding: 0.8rem 1rem; background: #fdecea; border-radius: 12px; }
+.bk__hp { position: absolute; left: -9999px; }
+.bk .btn-dark:disabled { opacity: 0.6; cursor: wait; }

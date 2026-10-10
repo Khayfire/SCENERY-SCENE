@@ -1,0 +1,13 @@
+.pf { padding-block: 2rem 4rem; }
+.pf__title { font-weight: 300; font-size: clamp(2rem, 6vw, 4rem); margin-bottom: 1.5rem; }
+.pf__title strong { font-weight: 800; }
+
+.pf__filters { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
+.pf__filters button {
+  font: 300 0.75rem var(--font); text-transform: uppercase; cursor: pointer;
+  padding: 0.6rem 1.1rem; border-radius: 999px;
+  border: 1px solid var(--ink); background: transparent; color: var(--ink);
+}
+.pf__filters button.is-active { background: var(--ink); color: #fff; }
+
+.pf__grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }

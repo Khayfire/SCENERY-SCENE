@@ -1,0 +1,45 @@
+.pkg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  background: var(--ink);
+  color: #fff;
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: 0 30px 40px -25px rgba(0, 0, 0, 0.45); /* soft shadow under the card, like the flyer */
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pkg:hover,
+.pkg:focus-visible {
+  transform: translateY(-6px);
+  box-shadow: 0 40px 50px -25px rgba(0, 0, 0, 0.55);
+}
+
+.pkg__title {
+  font-weight: 300;
+  font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+  line-height: 1.05;
+}
+.pkg__title span { display: block; }
+
+.pkg__details { text-align: right; }
+
+.pkg__features {
+  list-style: none;
+  font-size: clamp(0.65rem, 1.1vw, 0.8rem);
+  line-height: 1.55;
+}
+
+.pkg__price {
+  margin-top: 1rem;
+  font-weight: 800;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+}
+
+/* stack on small screens */
+@media (max-width: 520px) {
+  .pkg { grid-template-columns: 1fr; }
+  .pkg__details { text-align: left; }
+}

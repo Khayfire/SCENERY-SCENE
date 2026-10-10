@@ -1,0 +1,36 @@
+.nav { display: flex; align-items: center; justify-content: space-between; padding-block: 1.5rem; }
+.nav__logo { letter-spacing: 0.05em; }
+.nav__links { display: flex; gap: 2rem; font-size: 0.8rem; text-transform: uppercase; }
+.nav__links a.active { font-weight: 800; }
+.nav__book {
+  background: var(--ink); color: #fff; font-weight: 800;
+  padding: 1rem 1.4rem; border-radius: 0 0 18px 18px; /* tab-style like the flyer */
+}
+.nav__burger { display: none; }
+
+@media (max-width: 640px) {
+  .nav { position: relative; z-index: 50; }
+  .nav__book { margin-left: auto; margin-right: 0.5rem; padding: 0.8rem 1rem; font-size: 0.75rem; }
+
+  .nav__burger {
+    display: grid; place-content: center; gap: 6px;
+    width: 44px; height: 44px; background: none; border: 0; cursor: pointer;
+    position: relative; z-index: 60;
+  }
+  .nav__burger span {
+    display: block; width: 24px; height: 2px; background: var(--ink);
+    transition: transform 0.3s ease, opacity 0.2s ease, background 0.3s ease;
+  }
+  .nav__burger.is-open span { background: #fff; }
+  .nav__burger.is-open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+  .nav__burger.is-open span:nth-child(2) { opacity: 0; }
+  .nav__burger.is-open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+  .nav__links {
+    position: fixed; inset: 0; z-index: 40;
+    flex-direction: column; justify-content: center; align-items: center; gap: 2rem;
+    background: var(--ink); color: #fff; font-size: 1.4rem;
+    opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  .nav__links.is-open { opacity: 1; visibility: visible; }
+}

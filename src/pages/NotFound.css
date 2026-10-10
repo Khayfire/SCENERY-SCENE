@@ -1,0 +1,7 @@
+.nf { padding-block: clamp(3rem, 10vw, 7rem); }
+.nf__code { font-weight: 800; font-size: clamp(5rem, 22vw, 14rem); line-height: 0.9; letter-spacing: -0.04em; }
+.nf h1 { font-weight: 300; font-size: clamp(1.6rem, 5vw, 3rem); margin-block: 1rem; }
+.nf h1 strong { font-weight: 800; }
+.nf__text { margin-bottom: 2rem; max-width: 40ch; line-height: 1.6; font-size: 0.9rem; }
+.nf__actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.nf__link { text-decoration: underline; font-size: 0.85rem; }

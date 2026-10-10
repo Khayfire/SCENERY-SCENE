@@ -1,0 +1,13 @@
+.pk { padding-block: 2rem 4rem; }
+.pk__title { font-weight: 300; font-size: clamp(2rem, 6vw, 4rem); margin-bottom: 2rem; }
+.pk__title strong { font-weight: 800; }
+
+.pk__scroll { overflow-x: auto; }
+.pk__table { width: 100%; min-width: 560px; border-collapse: separate; border-spacing: 0 8px; font-size: 0.8rem; }
+.pk__table th, .pk__table td { padding: 1rem 1.2rem; text-align: left; background: var(--ink); color: #fff; }
+.pk__table th { font-weight: 300; font-size: 1rem; }
+.pk__table td:first-child, .pk__table th:first-child { background: transparent; color: var(--ink); font-weight: 800; }
+.pk__table tr > :nth-child(2) { border-radius: var(--radius) 0 0 var(--radius); }
+.pk__table tr > :last-child { border-radius: 0 var(--radius) var(--radius) 0; }
+.pk__price td:not(:first-child) { font-weight: 800; font-size: 1.1rem; }
+.pk__table .btn-dark { background: #fff; color: var(--ink); display: inline-block; }
