@@ -1,6 +1,6 @@
 const BASE =
   import.meta.env.VITE_API_URL ||
-  (import.meta.env.PROD ? "https://YOUR-SERVICE.onrender.com" : ""); // empty in dev, thanks to the proxy
+  (import.meta.env.PROD ? "https://scenery-scene-1.onrender.com" : ""); // empty in dev, thanks to the proxy
 
 async function request(path, { method = "GET", body, token } = {}) {
   const res = await fetch(`${BASE}${path}`, {
